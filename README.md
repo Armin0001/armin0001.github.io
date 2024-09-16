@@ -12,7 +12,7 @@ Hi, I'm a **Full Stack Web Developer** passionate about building efficient, scal
 
 <h2>About Me</h2>
 
-I have experience working with a variety of technologies, but **Next.js** and **Firebase** have come up most frequently in my projects. Whether it's developing responsive web applications or deploying cloud-based services, I enjoy tackling complex problems and delivering elegant solutions.
+I have experience working with a variety of technologies, but <bold>Next.js</bold> and <bold>Firebase</bold> have come up most frequently in my projects. Whether it's developing responsive web applications or deploying cloud-based services, I enjoy tackling complex problems and delivering elegant solutions.
 
 ---
 
@@ -20,10 +20,10 @@ I have experience working with a variety of technologies, but **Next.js** and **
 <h2>Education & Experience</h2>
 
 <h3>International University of Sarajevo</h3> 
-Bachelor of Science - Software Engineering </br>
-September 2016 - September 2022  </br>
+Bachelor of Science - Software Engineering <br/>
+September 2016 - September 2022  <br/>
 
-During my time at university, I developed a strong foundation in software engineering principles, which I've continuously built upon since graduating. </br>
+During my time at university, I developed a strong foundation in software engineering principles, which I've continuously built upon since graduating. <br/>
 
 ---
 
@@ -40,7 +40,7 @@ Feel free to check out my repositories or connect with me for collaborations or 
 
 <h2>Let's Connect</h2>
 
-<a href="https://www.linkedin.com/in/armin-isakovi%C4%87-b07b24215/">LinkedIn</a></br>
+<a href="https://www.linkedin.com/in/armin-isakovi%C4%87-b07b24215/">LinkedIn</a><br/>
 <a href="https://portofolio-phi-sepia.vercel.app/signin">My Portfolio</a>
 
 
