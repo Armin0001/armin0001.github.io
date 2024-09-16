@@ -6,10 +6,6 @@
 
 Hi, I'm a Full Stack Web Developer passionate about building efficient, scalable, and user-friendly applications. My work revolves around a continuous learning mindset, which I believe is essential for modern software engineers.
 
-
----
-
-
 <h2>About Me</h2>
 
 I have experience working with a variety of technologies, but <bold>Next.js</bold> and <bold>Firebase</bold> have come up most frequently in my projects. Whether it's developing responsive web applications or deploying cloud-based services, I enjoy tackling complex problems and delivering elegant solutions.
