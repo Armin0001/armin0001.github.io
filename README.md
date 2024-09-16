@@ -40,8 +40,8 @@ Feel free to check out my repositories or connect with me for collaborations or 
 
 <h2>Let's Connect</h2>
 
-[LinkedIn](https://www.linkedin.com/in/armin-isakovi%C4%87-b07b24215/)  
-[Portfolio](https://portofolio-phi-sepia.vercel.app/signin)
+<a href="https://www.linkedin.com/in/armin-isakovi%C4%87-b07b24215/">LinkedIn></a>  
+<a href="https://portofolio-phi-sepia.vercel.app/signin">My Portfolio</a>
 
 
 </div>
