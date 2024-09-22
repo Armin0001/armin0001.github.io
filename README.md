@@ -25,7 +25,7 @@ Feel free to check out my repositories or connect with me for collaborations or 
 
 <h2>Live Link Of This Project</h2>
 
-<a href="https://armin0001.github.io">Click here</a> </br>
+<a href="https://armin0001.github.io">Click here</a> <br/>
 <p>Link to check out the project.</p>
 
 <h2>Let's Connect</h2>
