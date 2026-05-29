@@ -23,10 +23,6 @@ In this rapidly changing field, I believe that continuous learning is crucial fo
 
 Feel free to check out my repositories or connect with me for collaborations or discussions about tech!
 
-<h2>Live Link Of This Project</h2>
-
-<a href="https://armin0001.github.io">Click here</a> <br/>
-<p>Link to check out the project.</p>
 
 <h2>Let's Connect</h2>
 
