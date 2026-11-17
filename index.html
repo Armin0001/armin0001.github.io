@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Armin Isaković — Frontend Engineer · React, Next.js, TypeScript</title>
+  <meta name="description" content="Frontend engineer with less than 5 years of work experience, shipping production React, Next.js and TypeScript. Team lead, mentor, and sole developer of a production membership registry. Available now — open to relocation in the EU.">
+  <meta name="author" content="Armin Isaković">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp). Preview crawlers need absolute URLs. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armin0001.github.io/">
+  <meta property="og:title" content="Armin Isaković — the frontend engineer you can hand the whole product to">
+  <meta property="og:description" content="Less than 5 years of work experience, shipping production React, Next.js and TypeScript. Team lead, mentor, full-stack ownership. Available now.">
+  <meta property="og:image" content="https://armin0001.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Armin Isaković: the frontend engineer you can hand the whole product to. React, Next.js, TypeScript.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://armin0001.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/yanone-kaffeesatz-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/maitree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Armin Isaković",
+    "url": "https://armin0001.github.io/",
+    "jobTitle": "Frontend Software Engineer",
+    "description": "Frontend engineer with less than 5 years of work experience, shipping production React, Next.js and TypeScript applications.",
+    "email": "mailto:armin.isakovic23@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Zenica", "addressCountry": "BA" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "International University of Sarajevo" },
+    "knowsLanguage": ["bs", "en", "de"],
+    "knowsAbout": ["React", "Next.js", "TypeScript", "JavaScript", "Node.js", "PostgreSQL", "Web performance", "Web accessibility"],
+    "sameAs": [
+      "https://github.com/Armin0001",
+      "https://www.linkedin.com/in/armin-isakovic-dev",
+      "https://frontendmasters.com/u/Armin0001/"
+    ]
+  }
+  </script>
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Icon sprite: referenced with <use>, so each icon is defined once. -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 20h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-south" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5 12 19l5.5-5.5"/></symbol>
+    <symbol id="i-fast" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5M13 7l5 5-5 5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="wrap bar" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Armin Isaković, home">Armin Isaković</a>
+
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#artifacts">Artifacts <span class="nav-count" aria-hidden="true">12</span></a></li>
+        <li><a href="how-i-build.html">How I Build</a></li>
+      </ul>
+
+      <div class="bar-actions">
+        <a class="bar-resume" href="assets/Armin-Isakovic-Resume.pdf" download>
+          Résumé <svg class="i" aria-hidden="true"><use href="#i-down"/></svg>
+        </a>
+        <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="status">
+            <span class="status-dot" aria-hidden="true"></span>
+            Available now <span class="status-sep" aria-hidden="true">/</span> Open to EU relocation
+          </p>
+
+          <h1 id="hero-title">The frontend engineer you can hand the <em>whole product</em> to.</h1>
+
+          <p class="lede">
+            In less than 5 years of work experience I’ve shipped production React, Next.js and
+            TypeScript, led a team, mentored two juniors, and built a production membership registry
+            solo, from database schema to deploy.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">
+              Start a conversation <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="assets/Armin-Isakovic-Resume.pdf" download>
+              Download résumé <span class="btn-note">PDF</span>
+            </a>
+          </div>
+
+          <ul class="hero-links" aria-label="Shortcuts and profiles">
+            <li><a class="fast-link" href="#fast-lane">Recruiter Fast Lane <svg class="i" aria-hidden="true"><use href="#i-south"/></svg></a></li>
+            <li><a href="https://github.com/Armin0001" target="_blank" rel="noopener">GitHub <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/armin-isakovic-dev" target="_blank" rel="noopener">LinkedIn <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></li>
+            <li><a href="https://frontendmasters.com/u/Armin0001/" target="_blank" rel="noopener">Frontend Masters <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></li>
+          </ul>
+        </div>
+
+        <aside class="spec" aria-labelledby="spec-title">
+          <header class="spec-head">
+            <p class="spec-kicker"><span>Spec sheet</span> <span>Rev. <time datetime="2026-11">11 / 2026</time></span></p>
+            <h2 id="spec-title">Armin Isaković</h2>
+            <p class="spec-role">Frontend / Full-Stack Engineer</p>
+          </header>
+          <dl class="spec-list">
+            <div><dt>Core stack</dt><dd>React · Next.js · TypeScript</dd></div>
+            <div><dt>Experience</dt><dd>Less than 5 years</dd></div>
+            <div><dt>Leadership</dt><dd>Team lead (2024) · Mentor</dd></div>
+            <div><dt>Languages</dt><dd>English C1 · German B1</dd></div>
+            <div><dt>Based in</dt><dd>Bosnia &amp; Herzegovina · CET</dd></div>
+            <div><dt>Relocation</dt><dd>Ready · EU Blue Card eligible</dd></div>
+          </dl>
+          <p class="spec-foot">
+            <span><span class="status-dot" aria-hidden="true"></span> Available now</span>
+            <a href="contact.html">Get in touch <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </p>
+        </aside>
+      </div>
+
+      <div class="wrap">
+        <ul class="stats" aria-label="Headline numbers, each linked to the evidence behind it">
+          <li><a href="#experience"><strong><span aria-hidden="true">&lt;5</span><span class="vh">Less than 5</span></strong> <span>years of work experience, shipping production React, Next.js &amp; TypeScript</span></a></li>
+          <li><a href="#artifact-01"><strong>~40</strong> <span>member facilities served by a registry I built solo</span></a></li>
+          <li><a href="#exp-wellbeing"><strong>5</strong> <span>high-traffic websites I helped keep running in production</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================== WHAT YOU GET ========================== -->
+    <section class="section section-lead" aria-labelledby="value-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow-num">01</span> What you get</p>
+          <h2 id="value-title">Three things you can count on.</h2>
+        </header>
+
+        <ol class="pillars" role="list">
+          <li>
+            <h3>Ownership, end to end</h3>
+            <p>Hand me a problem, not a ticket. I’ve taken a system from a <span class="nw">non-technical</span> client’s requirements to a database schema, a deployed product and months of production maintenance, on my own.</p>
+            <a href="#registry">See the case study <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li>
+            <h3>A team that gets better</h3>
+            <p>I led delivery as team lead in 2024, ran the code reviews, and mentored two interns from fundamentals to production-ready work. One of them was hired <span class="nw">full-time</span>.</p>
+            <a href="#exp-artco">See the track record <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li>
+            <h3>Frontend that holds up</h3>
+            <p>Accessible, fast and tested. I write the Vitest and Jest suites, chase hydration bugs to their root, and treat page weight as something to measure, not guess.</p>
+            <a href="#artifacts">Open the artifacts <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================== WORK ==============================
+         Seven projects, on purpose. Each one is here because I went deep on it:
+         the problem, the hard part, and the decisions I would defend in a review. -->
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow-num">02</span> Selected work</p>
+          <h2 id="work-title">Seven projects, taken all the way down.</h2>
+          <p class="section-intro">I’d rather show you seven things I understand completely than twenty I touched. Each one has a hard part, and the decisions I’d defend in a review.</p>
+        </header>
+
+        <ol class="dives" role="list">
+
+          <!-- 01 -->
+          <li>
+            <article class="dive" id="registry" aria-labelledby="d-registry">
+              <figure class="dive-media matrix">
+                <div class="matrix-card" role="img" aria-label="Illustration of a permission matrix: ten resources by four actions (create, read, update, delete), forty toggles in total.">
+                  <div class="matrix-head"><span>Role permissions</span><span class="matrix-pill">Editable by admins</span></div>
+                  <div class="matrix-grid">
+                    <span></span><b>Create</b><b>Read</b><b>Update</b><b>Delete</b>
+                    <span>resource_01</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+                    <span>resource_02</span><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                    <span>resource_03</span><i></i><i class="on"></i><i class="on"></i><i></i>
+                    <span>resource_04</span><i class="on"></i><i class="on"></i><i></i><i></i>
+                    <span>resource_05</span><i></i><i class="on"></i><i></i><i></i>
+                    <span>resource_06</span><i class="on"></i><i class="on"></i><i class="on"></i><i></i>
+                    <span>resource_07</span><i></i><i class="on"></i><i class="on"></i><i></i>
+                    <span>resource_08</span><i></i><i class="on"></i><i></i><i></i>
+                    <span>resource_09</span><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i>
+                    <span>resource_10</span><i></i><i class="on"></i><i></i><i></i>
+                  </div>
+                  <div class="matrix-foot"><span>10 × 4 = 40 combinations</span><span>0 redeploys</span></div>
+                </div>
+                <figcaption>Illustration of the permission model, not the production UI.</figcaption>
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">01</span> Client work · In production <time datetime="2025-11">Nov 2025</time> – <time datetime="2026-06">Jun 2026</time></p> <a class="aref" href="#artifact-01"><span class="vh">artifact </span>A-01</a></div>
+                <h3 id="d-registry">A membership registry for a professional licensing body</h3>
+                <p class="dive-thesis">One system for a licensing body’s members, their dues and their paperwork. I designed it, built it and ran it in production, alone.</p>
+                <p><strong class="lead-in">The hard part.</strong> Access. Ten kinds of records, four things you can do to each, and rules that are policy rather than code. Hard-coding roles would have meant a deploy every time the policy moved.</p>
+
+                <dl class="facts">
+                  <div><dt>Reach</dt><dd>~40 member facilities</dd></div>
+                  <div><dt>Access model</dt><dd>10 resources × 4 actions</dd></div>
+                  <div><dt>Team</dt><dd>Sole developer</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-registry" open>
+                    <summary>Permissions are data, not code</summary>
+                    <p>Every role is a set of create, read, update and delete switches per resource: 10 resources, 4 actions, 40 combinations. Admins change them in a settings screen, so an access change needs no code change and no redeploy.</p>
+                  </details>
+                  <details name="d-registry">
+                    <summary>The schema follows the real hierarchy</summary>
+                    <p>A legal entity, the licensed individuals registered under it, and each individual’s dues, fees and protocol records. Modelled relationally in PostgreSQL, so the questions the client actually asks are plain joins.</p>
+                  </details>
+                  <details name="d-registry">
+                    <summary>Documents live with the person they belong to</summary>
+                    <p>Member uploads go to MinIO, S3-compatible object storage, and are tied to the individual’s record rather than floating in a shared folder.</p>
+                  </details>
+                  <details name="d-registry">
+                    <summary>Outreach became a system, not a chore</summary>
+                    <p>Twilio SMS notifications took over what used to be done by hand. I gathered the requirements straight from a <span class="nw">non-technical</span> client, deployed on Vercel with automated deploys from Git, and maintained it in production.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>PostgreSQL</li><li>RBAC</li><li>MinIO / S3</li><li>Twilio</li><li>Vercel</li></ul>
+              </div>
+            </article>
+          </li>
+
+          <!-- 02 -->
+          <li>
+            <article class="dive" aria-labelledby="d-otb">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>online ticket booth — seat map</span></div>
+                <img src="assets/img/ticket-booth-640.webp"
+                     srcset="assets/img/ticket-booth-640.webp 640w, assets/img/ticket-booth-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="Dark seat map of a theatre with available, held and sold seats, next to an order panel with a five-minute hold timer.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">02</span> Concurrency · Next.js 16</p> <a class="aref" href="#artifact-04"><span class="vh">artifact </span>A-04</a></div>
+                <h3 id="d-otb">Online Ticket Booth</h3>
+                <p class="dive-thesis">Two people click seat J14 in the same instant. Exactly one of them may have it, and the other has to find out immediately.</p>
+                <p><strong class="lead-in">The hard part.</strong> Selling a seat is a compare-and-set, and anything that slips between the read and the write sells the seat twice. No framework solves that for you. The store has to.</p>
+
+                <dl class="facts">
+                  <div><dt>Venue</dt><dd>412 seats, 1 streamed string</dd></div>
+                  <div><dt>Verified by</dt><dd>45-check browser suite</dd></div>
+                  <div><dt>Cost of a hold</dt><dd>2 round trips, down from 5</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-otb" open>
+                    <summary>The one thing I refused to cache</summary>
+                    <p>Availability is only true at the instant you read it, so it is never cached. The same number on the on-sale index is cached for 60 seconds, because being wrong there costs nothing. Same number, two call sites, opposite treatment.</p>
+                  </details>
+                  <details name="d-otb">
+                    <summary>An order is all or nothing</summary>
+                    <p><code>SET NX</code> is the right primitive for one seat. An order is up to six. A Lua script reads all six and only then writes, so holding four of the six you asked for is not a state the system can be in.</p>
+                  </details>
+                  <details name="d-otb">
+                    <summary>One contract, two drivers</summary>
+                    <p>An in-process store and a Redis store are held to the same test contract, and the Redis one was verified against real servers. If Redis is configured but unreachable, the app fails loudly instead of quietly losing the guarantee.</p>
+                  </details>
+                  <details name="d-otb">
+                    <summary>Only a 412-character string streams</summary>
+                    <p>Seat geometry is pure maths with no I/O, so all 412 seats are prerendered into the static shell in their exact positions. Availability arrives afterwards as one letter per seat.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>Next.js 16</li><li>React 19</li><li>Redis + Lua</li><li>Partial Prerendering</li><li>SSE</li><li>Playwright</li></ul>
+                <p class="text-links">
+                  <a href="https://github.com/Armin0001/Online-Ticket-Booth#readme" target="_blank" rel="noopener">Architecture notes<span class="vh">: Online Ticket Booth</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                  <a href="https://github.com/Armin0001/Online-Ticket-Booth" target="_blank" rel="noopener">Source<span class="vh">: Online Ticket Booth</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 03 -->
+          <li>
+            <article class="dive" aria-labelledby="d-co2">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>co2 footprint — chrome extension</span></div>
+                <img src="assets/img/co2-footprint-640.webp"
+                     srcset="assets/img/co2-footprint-640.webp 640w, assets/img/co2-footprint-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="The CO2 Footprint popup open over a sample news page: 0.13 grams of CO2 equivalent per visit, rated B, cleaner than 80% of web pages, from a page size of 864 kB across 46 files.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">03</span> Browser extension · Web performance</p> <a class="aref" href="#artifact-02"><span class="vh">artifact </span>A-02</a></div>
+                <h3 id="d-co2">CO2 Footprint</h3>
+                <p class="dive-thesis">One click on any website tells you what a single visit to that page costs, in grams of CO<sub>2</sub>.</p>
+                <p><strong class="lead-in">The hard part.</strong> An honest number. A browser won’t tell an extension the size of every file a page loads, and the science behind the conversion is a model, not a meter. So the tool has to be clear about what it measured, what it estimated and what it left out.</p>
+
+                <dl class="facts">
+                  <div><dt>Permissions</dt><dd>2, used only on click</dd></div>
+                  <div><dt>Leaves your browser</dt><dd>Nothing</dd></div>
+                  <div><dt>Dependencies</dt><dd>None</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-co2" open>
+                    <summary>Count what a first-time visitor downloads</summary>
+                    <p>The popup reads the page’s own Performance API. Each file is counted once, even when it was preloaded, and cached files count at full size, because the question is what a new visitor pays.</p>
+                  </details>
+                  <details name="d-co2">
+                    <summary>When the browser won’t say, estimate and say so</summary>
+                    <p>Files from other domains can keep their size private. Those get a typical size for their type, taken from the HTTP Archive Web Almanac, and the popup says how many it estimated. API calls and tracking pings are left out rather than guessed. Chrome also stops recording after 250 files, and when a page hits that, the popup says the real figure is probably higher.</p>
+                  </details>
+                  <details name="d-co2">
+                    <summary>A published model, not my own maths</summary>
+                    <p>Bytes become grams with the Sustainable Web Design Model v4, using the same constants as CO2.js: 0.3 kWh per gigabyte and 494 g of CO<sub>2</sub>e per kWh, which comes to about 0.15 g per megabyte. The A+ to F rating uses the model’s own thresholds.</p>
+                  </details>
+                  <details name="d-co2">
+                    <summary>Private by construction</summary>
+                    <p>It asks for two permissions, <code>activeTab</code> and <code>scripting</code>, so it cannot see a tab until you click it. It makes no network requests and stores nothing. There is no server to send anything to.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>JavaScript</li><li>Manifest V3</li><li>Performance API</li><li>Zero dependencies</li></ul>
+                <p class="text-links">
+                  <a href="https://github.com/Armin0001/co2-footprint#how-the-number-is-calculated" target="_blank" rel="noopener">How the number is calculated<span class="vh">: CO2 Footprint</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                  <a href="https://github.com/Armin0001/co2-footprint" target="_blank" rel="noopener">Source<span class="vh">: CO2 Footprint</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 04 -->
+          <li>
+            <article class="dive" aria-labelledby="d-calc">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>theadvancedcalculator.com</span></div>
+                <img src="assets/img/advanced-calculator-640.webp"
+                     srcset="assets/img/advanced-calculator-640.webp 640w, assets/img/advanced-calculator-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="Home page of The Advanced Calculator: a grid of calculator cards including AI compute cost, grade, BMI, time zone and tip calculators.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">04</span> My own project · Live</p> <a class="aref" href="#artifact-03"><span class="vh">artifact </span>A-03</a></div>
+                <h3 id="d-calc">The Advanced Calculator</h3>
+                <p class="dive-thesis">A product on its own domain that I designed, built and have kept shipping since April 2025: 15+ calculators, each one built to be found.</p>
+                <p><strong class="lead-in">The hard part.</strong> A calculator nobody finds is a calculator nobody uses. The engineering problem here is search visibility: every tool has to be a fast, indexable page with something on it worth ranking.</p>
+
+                <dl class="facts">
+                  <div><dt>Catalogue</dt><dd>15+ calculators</dd></div>
+                  <div><dt>Iteration</dt><dd>39 commits since Apr 2025</dd></div>
+                  <div><dt>Stack</dt><dd>Next.js 15, React 19</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-calc" open>
+                    <summary>Every tool is a page with something to index</summary>
+                    <p>Each calculator has its own route, and below the widget sits long-form content that is rendered to HTML on the server: how it works, reference tables, and answers to the questions people actually type. Every tool is a real, indexable document, not an empty shell waiting for JavaScript.</p>
+                  </details>
+                  <details name="d-calc">
+                    <summary>Structured data from the same source as the page</summary>
+                    <p>One component renders the visible FAQ and emits the matching FAQPage JSON-LD, so what search engines read and what people read cannot drift apart.</p>
+                  </details>
+                  <details name="d-calc">
+                    <summary>Discovery is automated, not remembered</summary>
+                    <p>The sitemap and robots.txt are regenerated on every build, related-calculator links tie the tools together, and a fuzzy search covers the whole catalogue. Adding a calculator never involves a checklist.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>Next.js 15</li><li>React 19</li><li>Tailwind CSS 4</li><li>JSON-LD</li><li>Fuse.js</li></ul>
+                <p class="text-links">
+                  <a href="https://www.theadvancedcalculator.com" target="_blank" rel="noopener">Visit the site<span class="vh">: The Advanced Calculator</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 05 -->
+          <li>
+            <article class="dive" aria-labelledby="d-excalidraw">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>excalidraw ai — diagram agent</span></div>
+                <img src="assets/img/excalidraw-ai-640.webp"
+                     srcset="assets/img/excalidraw-ai-640.webp 640w, assets/img/excalidraw-ai-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="Diagram canvas showing a generated architecture diagram of a to-do app, beside a chat panel listing the agent’s completed tool calls.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">05</span> AI engineering · Evals</p> <a class="aref" href="#artifact-05"><span class="vh">artifact </span>A-05</a></div>
+                <h3 id="d-excalidraw">Excalidraw AI</h3>
+                <p class="dive-thesis">An agent that draws system diagrams from plain English, and a test suite that tells me whether it is getting better or just different.</p>
+                <p><strong class="lead-in">The hard part.</strong> Model output looks fine until you measure it. Arrows that do not attach, labels that float, boxes that overlap: the failures are structural, so the checks have to be structural too.</p>
+
+                <dl class="facts">
+                  <div><dt>Golden dataset</dt><dd>30 cases</dd></div>
+                  <div><dt>Scorers</dt><dd>8, structural first</dd></div>
+                  <div><dt>Agent tools</dt><dd>6, schema-strict</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-excalidraw" open>
+                    <summary>The feedback lives in the tool, not the prompt</summary>
+                    <p>Every call that adds elements returns the pairs that now overlap. The agent sees its own collisions and repairs them before it finishes. Telling a model to avoid overlaps is a wish. Handing it the evidence is a loop.</p>
+                  </details>
+                  <details name="d-excalidraw">
+                    <summary>What is graded is what runs</summary>
+                    <p>The eval harness imports the same system prompt and the same overlap detector as the deployed agent, and simulates the canvas so it can run without a browser. Every run is an experiment tagged with its commit.</p>
+                  </details>
+                  <details name="d-excalidraw">
+                    <summary>Malformed tool calls are not representable</summary>
+                    <p>Tool inputs are Zod schemas in strict mode, with nullable fields instead of optional ones, so the model cannot produce a call that fails validation.</p>
+                  </details>
+                  <details name="d-excalidraw">
+                    <summary>Grounded before it draws</summary>
+                    <p>For domain questions the agent searches a private vector index of reference documents, and the web, before it commits to a diagram. Built while working through Frontend Masters’ AI Engineering Fundamentals.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>Cloudflare Workers</li><li>Vercel AI SDK</li><li>Zod</li><li>Upstash Vector</li><li>Braintrust</li></ul>
+                <p class="text-links">
+                  <a href="https://github.com/Armin0001/excalidraw-ai" target="_blank" rel="noopener">Source<span class="vh">: Excalidraw AI</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                  <a href="how-i-build.html">How I work with LLMs <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 06 -->
+          <li>
+            <article class="dive" aria-labelledby="d-ether">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>ether-perfume-qtox.vercel.app</span></div>
+                <img src="assets/img/ether-640.webp"
+                     srcset="assets/img/ether-640.webp 640w, assets/img/ether-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="Landing page for a perfume house: a large serif wordmark over a cloud of golden particles on black.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">06</span> WebGL · Performance</p> <a class="aref" href="#artifact-06"><span class="vh">artifact </span>A-06</a></div>
+                <h3 id="d-ether"><span lang="fr">ÉTHER</span></h3>
+                <p class="dive-thesis">How do you put 26,000 moving particles behind a headline without paying for them in load time?</p>
+                <p><strong class="lead-in">The hard part.</strong> Heavy visuals usually cost you the first paint, the battery, and everyone who asked for less motion. The page had to be a fast, readable document first and a shader second.</p>
+
+                <dl class="facts">
+                  <div><dt>Particles</dt><dd>26,000, moved on the GPU</dd></div>
+                  <div><dt>First paint</dt><dd>Server-rendered text</dd></div>
+                  <div><dt>Reduced motion</dt><dd>A still frame instead</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-ether" open>
+                    <summary>Text first, shader second</summary>
+                    <p>All primary content is server-rendered, so the largest paint is text. Three.js is imported dynamically and never blocks it.</p>
+                  </details>
+                  <details name="d-ether">
+                    <summary>The motion happens in the vertex shader</summary>
+                    <p>Particles are displaced by layered simplex noise on the GPU, with antialiasing off and the pixel ratio capped at 2. JavaScript only advances a clock.</p>
+                  </details>
+                  <details name="d-ether">
+                    <summary>It stops when nobody is looking</summary>
+                    <p>The render loop pauses when the canvas scrolls offscreen or the tab is hidden, and every DOM animation sticks to transform and opacity.</p>
+                  </details>
+                  <details name="d-ether">
+                    <summary>Reduced motion is a designed path</summary>
+                    <p>Visitors who ask for less motion get a still golden frame and the full content, with the scroll effects skipped entirely.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>Next.js</li><li>Three.js</li><li>GLSL</li><li>GSAP</li></ul>
+                <p class="text-links">
+                  <a href="https://ether-perfume-qtox.vercel.app" target="_blank" rel="noopener">Live demo<span class="vh">: ÉTHER</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                  <a href="https://github.com/Armin0001/ether-perfume" target="_blank" rel="noopener">Source<span class="vh">: ÉTHER</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+          <!-- 07 -->
+          <li>
+            <article class="dive" aria-labelledby="d-drift">
+              <figure class="dive-media shot">
+                <div class="shot-bar" aria-hidden="true"><i></i><i></i><i></i><span>drift-self-sigma.vercel.app</span></div>
+                <img src="assets/img/drift-640.webp"
+                     srcset="assets/img/drift-640.webp 640w, assets/img/drift-1280.webp 1280w"
+                     sizes="(min-width: 62em) 30rem, 92vw" width="1280" height="672" loading="lazy" decoding="async"
+                     alt="Concept store home page with the headline “Don’t browse. Drift.” and a floating dock showing 60 of 60 results and filter controls.">
+              </figure>
+
+              <div class="dive-body">
+                <div class="kicker-row"><p class="kicker"><span class="dive-n">07</span> Interaction design · Motion</p> <a class="aref" href="#artifact-07"><span class="vh">artifact </span>A-07</a></div>
+                <h3 id="d-drift">Drift</h3>
+                <p class="dive-thesis">What if filters came to your cursor instead of living in a sidebar?</p>
+                <p><strong class="lead-in">The hard part.</strong> A new interaction only works if it stays predictable. Every filter change had to be reversible, explainable in a chip, and reachable without a mouse.</p>
+
+                <dl class="facts">
+                  <div><dt>Catalogue</dt><dd>60 products, 6 aisles</dd></div>
+                  <div><dt>Ways in</dt><dd>Click, flick or keyboard</dd></div>
+                  <div><dt>Safety net</dt><dd>Undo on every change</dd></div>
+                </dl>
+
+                <div class="decisions">
+                  <h4>Decisions I’d defend in a review</h4>
+                  <details name="d-drift" open>
+                    <summary>Filters are plain data</summary>
+                    <p>The whole page reflows from one filter object, and every chip carries the function that removes it. That makes undo a function call, not a feature.</p>
+                  </details>
+                  <details name="d-drift">
+                    <summary>The menu is about what you clicked</summary>
+                    <p>Right-click a product and the ring offers more like this, cheaper than this, or the same colour. Right-click an aisle heading and it offers something else. Hold, flick and release picks a wedge without a second click.</p>
+                  </details>
+                  <details name="d-drift">
+                    <summary>Taste is derived, not asked for</summary>
+                    <p>“My taste” is built from what you have viewed: the most common vibe, and a price band around the median.</p>
+                  </details>
+                  <details name="d-drift">
+                    <summary>The browser keeps its rights</summary>
+                    <p>Alt and right-click still opens the normal context menu, every action has a key, and the catalogue is seeded deterministically so server and client always agree.</p>
+                  </details>
+                </div>
+
+                <ul class="tags" aria-label="Technologies"><li>Next.js 16</li><li>Motion</li><li>Lenis</li><li>TypeScript</li></ul>
+                <p class="text-links">
+                  <a href="https://drift-self-sigma.vercel.app" target="_blank" rel="noopener">Live demo<span class="vh">: Drift</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                  <a href="https://github.com/Armin0001/shopping-cart" target="_blank" rel="noopener">Source<span class="vh">: Drift</span> <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+                </p>
+              </div>
+            </article>
+          </li>
+
+        </ol>
+
+        <p class="dives-more">There is more on GitHub, but these are the seven I would walk you through line by line. <a href="https://github.com/Armin0001" target="_blank" rel="noopener">See the rest <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ============================ ARTIFACTS ============================
+         An artifact is something a visitor can open and inspect: a live site, source code,
+         a paper, a document. The rest of the site cites these by id (A-04).
+
+         To add one: copy a <tr>, give it the next id (artifact-13) and number (A-13),
+         set data-cat to one of: shipped | projects | research | records,
+         then bump the counts: the nav badge (on every page), the "All" chip, the matching chip,
+         the two totals in the table footer, and the count in the Recruiter Fast Lane (every page).
+         Row order matters: the first eight rows are what visitors see before "Show all".
+         The filter and the toggle are pure CSS (:has + form controls), so there is nothing else to wire up. -->
+    <section id="artifacts" class="section section-tint" aria-labelledby="artifacts-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow-num">03</span> Proof</p>
+          <h2 id="artifacts-title">Artifacts.</h2>
+          <p class="section-intro">A sales page without proof is just adjectives. These are things I’ve actually made, shipped or published, and every one of them can be opened and inspected. Wherever you see a tag like <a class="aref" href="#artifact-04"><span class="vh">artifact </span>A-04</a> on this site, it points here.</p>
+        </header>
+
+        <fieldset class="filters">
+          <legend class="vh">Filter the artifacts by kind</legend>
+          <label class="chip"><input type="radio" name="artifact-filter" id="f-all" checked><span>All <b>12</b></span></label>
+          <label class="chip"><input type="radio" name="artifact-filter" id="f-shipped"><span>Shipped <b>2</b></span></label>
+          <label class="chip"><input type="radio" name="artifact-filter" id="f-projects"><span>Projects <b>5</b></span></label>
+          <label class="chip"><input type="radio" name="artifact-filter" id="f-research"><span>Research <b>2</b></span></label>
+          <label class="chip"><input type="radio" name="artifact-filter" id="f-records"><span>Records <b>3</b></span></label>
+        </fieldset>
+
+        <div class="table-card">
+          <table class="artifacts">
+            <caption class="vh">Artifacts: things I made, shipped or published, each with its type, date and a link to open it</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="c-id">ID</th>
+                <th scope="col" class="c-artifact">Artifact</th>
+                <th scope="col" class="c-cat">Type</th>
+                <th scope="col" class="c-when">When</th>
+                <th scope="col" class="c-receipt">Open</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr id="artifact-01" data-cat="shipped">
+                <td class="c-id">A-01</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-01 · Client system · 2025–26</span><strong>Membership registry for a professional licensing body</strong><span class="detail">Shows end-to-end ownership: sole developer from requirements to production, serving ~40 member facilities.</span></th>
+                <td class="c-cat">Client system</td>
+                <td class="c-when">2025–26</td>
+                <td class="c-receipt"><a href="#registry">Deep dive</a></td>
+              </tr>
+              <tr id="artifact-02" data-cat="projects">
+                <td class="c-id">A-02</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-02 · Browser extension · 2026</span><strong>CO2 Footprint</strong><span class="detail">Shows web-platform depth: a Chrome extension that turns the bytes a page downloads into grams of CO<sub>2</sub> per visit, with two permissions, no server and no dependencies.</span></th>
+                <td class="c-cat">Browser extension</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="#d-co2">Deep dive</a> <a href="https://github.com/Armin0001/co2-footprint" target="_blank" rel="noopener">Source <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-03" data-cat="shipped">
+                <td class="c-id">A-03</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-03 · Own project · Since 2025</span><strong>theadvancedcalculator.com</strong><span class="detail">Shows I can launch and keep running a product: 15+ calculators on their own domain, designed, built, deployed and <span class="nw">SEO-optimized</span>.</span></th>
+                <td class="c-cat">Own project</td>
+                <td class="c-when">Since 2025</td>
+                <td class="c-receipt"><a href="#d-calc">Deep dive</a> <a href="https://www.theadvancedcalculator.com" target="_blank" rel="noopener">Live <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-04" data-cat="projects">
+                <td class="c-id">A-04</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-04 · Code and write-up · 2026</span><strong>Online Ticket Booth</strong><span class="detail">Shows concurrency and Next.js 16 depth: atomic seat holds for a 412-seat theatre, with architecture notes that explain every caching decision.</span></th>
+                <td class="c-cat">Code and write-up</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="#d-otb">Deep dive</a> <a href="https://github.com/Armin0001/Online-Ticket-Booth" target="_blank" rel="noopener">Source <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-05" data-cat="projects">
+                <td class="c-id">A-05</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-05 · Code and evals · 2026</span><strong>Excalidraw AI and its eval suite</strong><span class="detail">Shows AI engineering that is measured, not guessed: a diagram agent scored by eight scorers over a 30-case golden dataset.</span></th>
+                <td class="c-cat">Code and evals</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="#d-excalidraw">Deep dive</a> <a href="https://github.com/Armin0001/excalidraw-ai" target="_blank" rel="noopener">Source <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-06" data-cat="projects">
+                <td class="c-id">A-06</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-06 · Live demo · 2026</span><strong><span lang="fr">ÉTHER</span></strong><span class="detail">Shows performance under visual load: 26,000 GPU particles with server-rendered text, a canvas that pauses offscreen and a reduced-motion fallback.</span></th>
+                <td class="c-cat">Live demo</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="#d-ether">Deep dive</a> <a href="https://ether-perfume-qtox.vercel.app" target="_blank" rel="noopener">Live <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-07" data-cat="projects">
+                <td class="c-id">A-07</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-07 · Live demo · 2026</span><strong>Drift</strong><span class="detail">Shows interaction design: radial filters that open at the cursor on right-click, plain-language search, and undo for every change.</span></th>
+                <td class="c-cat">Live demo</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="#d-drift">Deep dive</a> <a href="https://drift-self-sigma.vercel.app" target="_blank" rel="noopener">Live <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-08" data-cat="records">
+                <td class="c-id">A-08</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-08 · Profile · Since 2020</span><strong>GitHub profile</strong><span class="detail">Shows steady practice: 150+ repositories built since 2020, 48 of them public and open to inspection.</span></th>
+                <td class="c-cat">Profile</td>
+                <td class="c-when">Since 2020</td>
+                <td class="c-receipt"><a href="https://github.com/Armin0001" target="_blank" rel="noopener">GitHub <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-09" data-cat="records">
+                <td class="c-id">A-09</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-09 · Learning record · Since 2022</span><strong>Frontend Masters learning record</strong><span class="detail">Shows I keep learning in public: 220+ hours and 1,500+ lessons since May 2022, with a 14-week streak.</span></th>
+                <td class="c-cat">Learning record</td>
+                <td class="c-when">Since 2022</td>
+                <td class="c-receipt"><a href="https://frontendmasters.com/u/Armin0001/" target="_blank" rel="noopener">Profile <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a></td>
+              </tr>
+              <tr id="artifact-10" data-cat="records">
+                <td class="c-id">A-10</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-10 · Document · 2026</span><strong>Résumé</strong><span class="detail">One page, PDF. The same facts as this site, in the format hiring systems expect.</span></th>
+                <td class="c-cat">Document</td>
+                <td class="c-when">2026</td>
+                <td class="c-receipt"><a href="assets/Armin-Isakovic-Resume.pdf" download>Download <svg class="i" aria-hidden="true"><use href="#i-down"/></svg></a></td>
+              </tr>
+              <tr id="artifact-11" data-cat="research">
+                <td class="c-id">A-11</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-11 · Conference paper · 2021</span><strong>Rectangular Patch Antenna with a Gap and Two Symmetric Squares</strong><span class="detail">Published in the proceedings of the IV International Conference on Engineering Entrepreneurship.</span></th>
+                <td class="c-cat">Conference paper</td>
+                <td class="c-when">2021</td>
+                <td class="c-receipt"><a href="#publications">Citation</a></td>
+              </tr>
+              <tr id="artifact-12" data-cat="research">
+                <td class="c-id">A-12</td>
+                <th scope="row" class="c-artifact"><span class="m-meta">A-12 · Conference paper · 2021</span><strong>3 dB Branchline Coupler with Slits at the Center</strong><span class="detail">Published in the proceedings of the IV International Conference on Engineering Entrepreneurship.</span></th>
+                <td class="c-cat">Conference paper</td>
+                <td class="c-when">2021</td>
+                <td class="c-receipt"><a href="#publications">Citation</a></td>
+              </tr>
+
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <div class="tfoot-row">
+                    <span class="showing">Showing <span class="showing-n"></span> of 12 artifacts</span>
+                    <label class="more-toggle">
+                      <input type="checkbox" id="artifact-all">
+                      <span class="when-closed">Show all 12</span><span class="when-open">Show fewer</span>
+                      <svg class="i" aria-hidden="true"><use href="#i-chevron"/></svg>
+                    </label>
+                    <a href="contact.html">Ask me about any of them <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== EXPERIENCE =========================== -->
+    <section id="experience" class="section" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow-num">04</span> Track record</p>
+          <h2 id="exp-title">Paid, production work.</h2>
+          <p class="section-intro">Less than 5 years of work experience, plus the degree and the paper trail behind it.</p>
+        </header>
+
+        <ol class="timeline" role="list">
+          <li id="exp-astra">
+            <p class="tl-when"><time datetime="2025-11">Nov 2025</time> – <time datetime="2026-06">Jun 2026</time></p>
+            <div class="tl-body">
+              <h3>Full-Stack Developer <span class="tl-org">Astra Core · Freelance</span></h3>
+              <ul>
+                <li>Sole developer of a production membership registry serving ~40 member facilities, modeling legal entities, licensed individuals, dues, fees and protocol records.</li>
+                <li>Built admin-configurable role-based access control across 10 resources and 4 actions: 40 permission combinations without code changes or redeploys.</li>
+                <li>Gathered requirements from a non-technical client and maintained the system in production.</li>
+              </ul>
+              <p class="tl-artifacts">Artifact from this role <a class="aref" href="#artifact-01"><span class="vh">artifact </span>A-01</a></p>
+            </div>
+          </li>
+          <li id="exp-artco">
+            <p class="tl-when"><time datetime="2023-04">Apr 2023</time> – <time datetime="2026-04">Apr 2026</time></p>
+            <div class="tl-body">
+              <h3>Full-Stack / Frontend Software Engineer <span class="tl-org">Artco Group · Sarajevo</span></h3>
+              <ul>
+                <li>Built and maintained production web applications in React, Next.js and TypeScript, in an Agile/Scrum team.</li>
+                <li><strong>Team lead in 2024:</strong> coordinated deliverables while supporting daily execution.</li>
+                <li><strong>Mentored 2 intern developers</strong> from fundamentals to production-ready skills. One secured a full-time position.</li>
+                <li>Designed REST API workflows and auth guards with role-based access control, plus full-stack features on Node.js and Firestore for admin modules and real-time dashboards.</li>
+                <li>Wrote unit and integration suites with Vitest and Jest, led code reviews, and identified and mitigated application vulnerabilities.</li>
+                <li>Diagnosed and resolved SSR hydration issues in Next.js.</li>
+              </ul>
+            </div>
+          </li>
+          <li id="exp-wellbeing">
+            <p class="tl-when"><time datetime="2023-03">Mar 2023</time> – <time datetime="2023-05">May 2023</time></p>
+            <div class="tl-body">
+              <h3>Node.js Developer <span class="tl-org">WellBeing</span></h3>
+              <ul>
+                <li>Helped maintain 5 high-traffic websites within an Agile team, aligning priorities and progress through weekly standups.</li>
+              </ul>
+            </div>
+          </li>
+          <li id="exp-core">
+            <p class="tl-when"><time datetime="2022-09">Sep 2022</time> – <time datetime="2022-10">Oct 2022</time></p>
+            <div class="tl-body">
+              <h3>Software Engineering Intern <span class="tl-org">Core</span></h3>
+              <ul>
+                <li>One-month full-time internship as part of the B.Sc., during which I earned the Oracle Foundations Associate certification.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+
+        <div class="paper">
+          <section id="education" aria-labelledby="edu-title">
+            <h3 id="edu-title">Education</h3>
+            <ul role="list">
+              <li><strong>B.Sc. Software Engineering</strong><span>International University of Sarajevo · 2016–2022</span></li>
+              <li><strong>Erasmus+ exchange semester</strong><span>Universidad de Cádiz, Spain · Feb–Jun 2019</span></li>
+            </ul>
+          </section>
+          <section aria-labelledby="lang-title">
+            <h3 id="lang-title">Languages &amp; certificates</h3>
+            <ul role="list">
+              <li><strong>English</strong><span>C1, full professional proficiency</span></li>
+              <li><strong>German</strong><span>B1, <span lang="de">ÖSD Zertifikat</span>, working towards B2</span></li>
+              <li><strong>Bosnian</strong><span>Native · Spanish, basic</span></li>
+              <li><strong>Oracle Foundations Associate</strong><span>2022</span></li>
+            </ul>
+          </section>
+          <section id="publications" aria-labelledby="pub-title">
+            <h3 id="pub-title">Publications</h3>
+            <ul role="list">
+              <li><cite>Rectangular Patch Antenna with a Gap and Two Symmetric Squares</cite><span>IV International Conference on Engineering Entrepreneurship, Book of Proceedings, Vol. 1, p. 13, 2021 <a class="aref" href="#artifact-11"><span class="vh">artifact </span>A-11</a></span></li>
+              <li><cite>3 dB Branchline Coupler with Slits at the Center</cite><span>IV International Conference on Engineering Entrepreneurship, Book of Proceedings, Vol. 1, p. 12, 2021 <a class="aref" href="#artifact-12"><span class="vh">artifact </span>A-12</a></span></li>
+            </ul>
+          </section>
+        </div>
+
+        <p class="offclock">Off the clock: long-distance running (half-marathon finisher), and side projects like the ones above.</p>
+      </div>
+    </section>
+
+    <!-- ============================== STACK ============================== -->
+    <section id="stack" class="section section-tint" aria-labelledby="stack-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow"><span class="eyebrow-num">05</span> Toolkit</p>
+          <h2 id="stack-title">What I build with.</h2>
+          <p class="section-intro">The tools I reach for daily first, then the ones I’ve picked up when the job called for it.</p>
+        </header>
+
+        <dl class="stack">
+          <div><dt>Frontend</dt><dd><strong>React, Next.js, TypeScript</strong>, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Redux, TanStack, Vite, Figma</dd></div>
+          <div><dt>Backend &amp; APIs</dt><dd><strong>Node.js</strong>, Express.js, REST APIs, GraphQL</dd></div>
+          <div><dt>Data</dt><dd><strong>PostgreSQL</strong>, Firebase, MongoDB, DynamoDB, SQL</dd></div>
+          <div><dt>Testing &amp; quality</dt><dd>Vitest, Jest, React Testing Library, Zod, code review, debugging</dd></div>
+          <div><dt>Cloud &amp; delivery</dt><dd>Vercel, Docker, CI/CD, AWS Lambda, AWS Amplify, MinIO / S3, Core Web Vitals, Agile/Scrum</dd></div>
+          <div><dt>AI engineering</dt><dd>RAG, context engineering, evals</dd></div>
+          <div><dt>Also worked with</dt><dd>Angular, Vue.js, Nuxt.js, SvelteKit, React Native, Expo, ASP.NET Core, Java Spring Boot, Python</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="closing">
+
+    <!-- ============================= CONTACT ============================= -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-pitch">
+          <p class="eyebrow"><span class="eyebrow-num">06</span> Contact</p>
+          <h2 id="contact-title">Ready <em>when you are.</em></h2>
+        </div>
+        <div class="contact-act">
+          <p class="contact-lede">
+            I’m available now for frontend and full-stack roles: remote, hybrid or on-site,
+            <span class="nw">full-time</span> or contract, with relocation in the EU on the table.
+            One email and we’re talking.
+          </p>
+          <p class="contact-email">
+            <a href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">armin.isakovic23@gmail.com</a>
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">
+              Email me <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-outline" href="contact.html">
+              More ways to reach me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= RECRUITER FAST LANE =======================
+         The screening sheet: everything a recruiter needs without reading the page.
+         It sits at the bottom of every page (the hero links to it), and the copies must stay identical. -->
+    <section id="fast-lane" class="fastlane" aria-labelledby="fast-lane-title">
+      <div class="wrap">
+        <div class="fl-panel">
+          <header class="fl-head">
+            <p class="fl-kicker"><svg class="i" aria-hidden="true"><use href="#i-fast"/></svg> For recruiters</p>
+            <h2 id="fast-lane-title">Recruiter Fast Lane</h2>
+            <p class="fl-sub">Everything you need to screen me in 30 seconds. No scrolling back up required.</p>
+          </header>
+
+          <dl class="fl-facts">
+            <div><dt>Role</dt><dd>Frontend / Full-Stack Engineer</dd></div>
+            <div><dt>Experience</dt><dd>Less than 5 years <small>Team lead in 2024</small></dd></div>
+            <div><dt>Core stack</dt><dd>React, Next.js, TypeScript <small>Node.js, PostgreSQL</small></dd></div>
+            <div><dt>Availability</dt><dd>Now <small>Full-time or contract</small></dd></div>
+            <div><dt>Work model</dt><dd>Remote, hybrid or on-site</dd></div>
+            <div><dt>Location</dt><dd>Zenica, Bosnia &amp; Herzegovina <small>Central European Time</small></dd></div>
+            <div><dt>Work eligibility</dt><dd>EU Blue Card eligible <small>Ready to relocate</small></dd></div>
+            <div><dt>Languages</dt><dd>English C1, German B1 <small>Bosnian native</small></dd></div>
+            <div><dt>Education</dt><dd>B.Sc. Software Engineering <small>International University of Sarajevo</small></dd></div>
+          </dl>
+
+          <div class="fl-summary">
+            <p class="fl-label">Copy-ready summary <span>Click the text to select all of it</span></p>
+            <p class="fl-copy">Armin Isaković, Frontend / Full-Stack Engineer. Less than 5 years of work experience, shipping production React, Next.js and TypeScript; team lead in 2024 and mentor to two junior developers. English C1, German B1. Based in Bosnia and Herzegovina (CET), EU Blue Card eligible and ready to relocate. Available now. armin.isakovic23@gmail.com, linkedin.com/in/armin-isakovic-dev</p>
+          </div>
+
+          <address class="fl-actions">
+            <a class="btn btn-gold" href="assets/Armin-Isakovic-Resume.pdf" download>Résumé <span class="btn-note">PDF</span></a>
+            <a class="btn btn-outline" href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">Email</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/armin-isakovic-dev" target="_blank" rel="noopener">LinkedIn <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="https://github.com/Armin0001" target="_blank" rel="noopener">GitHub <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="tel:+38761088080">+387 61 088 080</a>
+            <a class="fl-more" href="#artifacts">12 artifacts you can open <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="footer-brand">Armin Isaković</p>
+        <p class="footer-bio">Frontend engineer from Zenica, Bosnia and Herzegovina. I studied software engineering in Sarajevo, I’ve finished a half-marathon, and I do my best work when I own a problem from the first conversation to production.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Roles">
+        <h2>Roles I’m a fit for</h2>
+        <ul>
+          <li><a href="frontend-engineer.html">Frontend Engineer</a></li>
+          <li><a href="full-stack-engineer.html">Full-Stack Engineer</a></li>
+          <li><a href="product-engineer.html">Product Engineer</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-i-build.html">How I Build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="assets/Armin-Isakovic-Resume.pdf" download>Résumé (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="wrap footer-base">
+      <p>© 2026 Armin Isaković</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

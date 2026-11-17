@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>How I Build — working with LLMs | Armin Isaković</title>
+  <meta name="description" content="How Armin Isaković builds software with LLMs: context engineering, evals as the contract, feedback loops inside tools, and verification against the real thing.">
+  <meta name="author" content="Armin Isaković">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp). Preview crawlers need absolute URLs. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armin0001.github.io/how-i-build.html">
+  <meta property="og:title" content="How I Build — working with LLMs | Armin Isaković">
+  <meta property="og:description" content="How Armin Isaković builds software with LLMs: context engineering, evals as the contract, feedback loops inside tools, and verification against the real thing.">
+  <meta property="og:image" content="https://armin0001.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://armin0001.github.io/how-i-build.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/yanone-kaffeesatz-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/maitree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- The icon sprite, header, Recruiter Fast Lane and footer are identical on every page.
+       When you change one of them, change it on all pages. -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 20h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-south" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5 12 19l5.5-5.5"/></symbol>
+    <symbol id="i-fast" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5M13 7l5 5-5 5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="wrap bar" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Armin Isaković, home">Armin Isaković</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#artifacts">Artifacts <span class="nav-count" aria-hidden="true">12</span></a></li>
+        <li><a href="how-i-build.html" aria-current="page">How I Build</a></li>
+      </ul>
+
+      <div class="bar-actions">
+        <a class="bar-resume" href="assets/Armin-Isakovic-Resume.pdf" download>
+          Résumé <svg class="i" aria-hidden="true"><use href="#i-down"/></svg>
+        </a>
+        <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow"><span class="eyebrow-num">How I Build</span> Working with LLMs</p>
+        <h1 id="page-title">The model writes the first draft. I own <em>everything around it.</em></h1>
+        <p class="lede">I treat an LLM the way I’d treat any powerful, unreliable component: give it precise inputs, constrain what it can do, and measure what comes out. The typing was never the hard part. The spec, the context and the proof are, and those stay with me.</p>
+      </div>
+    </section>
+
+    <div class="page-body">
+      <div class="wrap split">
+        <div class="prose">
+
+          <h2>The loop</h2>
+          <p>Every piece of AI-assisted work I do goes through the same five steps. The model is in the middle three. I’m in all five.</p>
+
+          <ol class="loop">
+            <li>
+              <h3>Frame</h3>
+              <p>Before there is a prompt, I write down what done looks like: the outcome, the constraints, what is out of scope, and how the result will be checked. A vague brief gets you confident nonsense, faster.</p>
+            </li>
+            <li>
+              <h3>Feed</h3>
+              <p>Then I assemble what the model cannot guess: the source-of-truth documents, the existing code and its conventions, an example of good. If two sources disagree, that gets settled before the model has to choose.</p>
+            </li>
+            <li>
+              <h3>Plan</h3>
+              <p>For anything non-trivial the model proposes an approach first, and I push on it. A plan is cheap to change. A diff is not.</p>
+            </li>
+            <li>
+              <h3>Build in small steps</h3>
+              <p>Changes land in pieces small enough to read. Each piece comes with a check: a type check, a test, a script, a rendered page.</p>
+            </li>
+            <li>
+              <h3>Verify, then review</h3>
+              <p>The machine verifies what a machine can. I review what is left: naming, trade-offs, and the thing the checks do not know to look for.</p>
+            </li>
+          </ol>
+
+          <h2>Six rules I work by</h2>
+          <p>Each of these came out of something I built. The tags point to the artifact where you can see it.</p>
+
+          <ol class="loop">
+            <li>
+              <h3>Context is the real prompt</h3>
+              <p>Most bad output is a context problem. The model did not know what was true, what was allowed, or what good looks like. So that is where my effort goes: vetted sources, explicit scope, and the smallest set of files that makes the task unambiguous. Clever wording comes a distant second.</p>
+              <p class="in-practice"><strong>In practice.</strong> My diagram agent does not answer domain questions from memory. It first searches a private index of reference documents I chose, and the web, and only then commits to a diagram. <a class="aref" href="index.html#artifact-05"><span class="vh">artifact </span>A-05</a></p>
+            </li>
+            <li>
+              <h3>Put the feedback in the tool, not the prompt</h3>
+              <p>Asking a model to “avoid overlapping boxes” is a wish. Handing it the list of boxes that overlap is a loop. Agents get better when their tools report consequences, because evidence in the context beats instructions about the future.</p>
+              <p class="in-practice"><strong>In practice.</strong> In my diagram agent, every call that adds elements returns the pairs that now collide, and the agent repairs them before it finishes. <a class="aref" href="index.html#artifact-05"><span class="vh">artifact </span>A-05</a></p>
+            </li>
+            <li>
+              <h3>Evals are the contract</h3>
+              <p>If I cannot measure it, I cannot tell an improvement from a change. Model behaviour gets a golden dataset and scorers, structural ones first: do the arrows attach, do the labels bind, did it call the right tool in the right order. A prompt tweak has to earn its place against the last run.</p>
+              <p class="in-practice"><strong>In practice.</strong> A 30-case golden dataset and eight scorers, with every run recorded as an experiment tagged with its commit. <a class="aref" href="index.html#artifact-05"><span class="vh">artifact </span>A-05</a></p>
+            </li>
+            <li>
+              <h3>Grade what actually runs</h3>
+              <p>An eval that exercises a copy of the system proves the copy works. The harness has to import the same prompt, the same tools and the same checks as production, or the numbers are decoration.</p>
+              <p class="in-practice"><strong>In practice.</strong> The eval harness shares the system prompt and the overlap detector with the deployed agent, and simulates the canvas so it can run without a browser. <a class="aref" href="index.html#artifact-05"><span class="vh">artifact </span>A-05</a></p>
+            </li>
+            <li>
+              <h3>Make bad output unrepresentable</h3>
+              <p>Constraints do more than instructions. Types, strict schemas and narrow interfaces shrink the space of things a model can get wrong, which is cheaper than catching mistakes afterwards.</p>
+              <p class="in-practice"><strong>In practice.</strong> The agent’s tool inputs are Zod schemas in strict mode with nullable fields instead of optional ones, so a malformed tool call is not something the model can produce. <a class="aref" href="index.html#artifact-05"><span class="vh">artifact </span>A-05</a></p>
+            </li>
+            <li>
+              <h3>Verify against the real thing, and fail loudly</h3>
+              <p>“It should work” is not a status. I want the check that runs against the real server, the real browser, the real build. And when a guarantee cannot be met, I want the system to stop, not to carry on quietly without it.</p>
+              <p class="in-practice"><strong>In practice.</strong> The ticket booth’s Redis store is tested against real Redis servers and a 45-check browser suite, and it refuses to fall back silently when Redis is unreachable. <a class="aref" href="index.html#artifact-04"><span class="vh">artifact </span>A-04</a></p>
+            </li>
+          </ol>
+
+          <h2>Where I do not hand over the wheel</h2>
+          <ul>
+            <li><strong>Decisions with a long tail.</strong> Data models, public interfaces, what to cache and what never to. A model is good at laying out options. Choosing is my job, because I am the one who lives with it.</li>
+            <li><strong>Anything I cannot explain.</strong> If I cannot walk through a change line by line, it does not merge.</li>
+            <li><strong>Secrets and private data.</strong> They stay out of prompts.</li>
+            <li><strong>Irreversible actions.</strong> Publishing, deleting, sending: those wait for a human yes.</li>
+          </ul>
+
+          <h2>What a team gets</h2>
+          <p>Speed with a safety net. I move quickly with these tools because the checks are in place first, and I can set the same things up for a team: a golden dataset and scorers for an AI feature, strict schemas around tool calls, verification scripts that run against a real build.</p>
+          <p>I have also mentored junior developers, so I care about how a team learns to use these tools, not only whether I can.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="contact.html">Talk to me about how I’d work with your team <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <aside class="side-card" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <dl class="glance">
+            <div><dt>The idea</dt><dd>The model drafts. I own the spec, the context and the proof.</dd></div>
+            <div><dt>Agentic coding</dt><dd>Claude Code</dd></div>
+            <div><dt>LLM stack I’ve built on</dt><dd>Vercel AI SDK, OpenAI models, Cloudflare Workers and Agents SDK, Upstash Vector, Tavily, Braintrust</dd></div>
+            <div><dt>Guardrails</dt><dd>TypeScript, Zod, Vitest, Jest, Playwright</dd></div>
+            <div><dt>See it in code</dt><dd><a href="index.html#d-excalidraw">Excalidraw AI deep dive</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+
+    <div class="closing">
+
+    <section id="fast-lane" class="fastlane" aria-labelledby="fast-lane-title">
+      <div class="wrap">
+        <div class="fl-panel">
+          <header class="fl-head">
+            <p class="fl-kicker"><svg class="i" aria-hidden="true"><use href="#i-fast"/></svg> For recruiters</p>
+            <h2 id="fast-lane-title">Recruiter Fast Lane</h2>
+            <p class="fl-sub">Everything you need to screen me in 30 seconds. No scrolling back up required.</p>
+          </header>
+
+          <dl class="fl-facts">
+            <div><dt>Role</dt><dd>Frontend / Full-Stack Engineer</dd></div>
+            <div><dt>Experience</dt><dd>Less than 5 years <small>Team lead in 2024</small></dd></div>
+            <div><dt>Core stack</dt><dd>React, Next.js, TypeScript <small>Node.js, PostgreSQL</small></dd></div>
+            <div><dt>Availability</dt><dd>Now <small>Full-time or contract</small></dd></div>
+            <div><dt>Work model</dt><dd>Remote, hybrid or on-site</dd></div>
+            <div><dt>Location</dt><dd>Zenica, Bosnia &amp; Herzegovina <small>Central European Time</small></dd></div>
+            <div><dt>Work eligibility</dt><dd>EU Blue Card eligible <small>Ready to relocate</small></dd></div>
+            <div><dt>Languages</dt><dd>English C1, German B1 <small>Bosnian native</small></dd></div>
+            <div><dt>Education</dt><dd>B.Sc. Software Engineering <small>International University of Sarajevo</small></dd></div>
+          </dl>
+
+          <div class="fl-summary">
+            <p class="fl-label">Copy-ready summary <span>Click the text to select all of it</span></p>
+            <p class="fl-copy">Armin Isaković, Frontend / Full-Stack Engineer. Less than 5 years of work experience, shipping production React, Next.js and TypeScript; team lead in 2024 and mentor to two junior developers. English C1, German B1. Based in Bosnia and Herzegovina (CET), EU Blue Card eligible and ready to relocate. Available now. armin.isakovic23@gmail.com, linkedin.com/in/armin-isakovic-dev</p>
+          </div>
+
+          <address class="fl-actions">
+            <a class="btn btn-gold" href="assets/Armin-Isakovic-Resume.pdf" download>Résumé <span class="btn-note">PDF</span></a>
+            <a class="btn btn-outline" href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">Email</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/armin-isakovic-dev" target="_blank" rel="noopener">LinkedIn <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="https://github.com/Armin0001" target="_blank" rel="noopener">GitHub <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="tel:+38761088080">+387 61 088 080</a>
+            <a class="fl-more" href="index.html#artifacts">12 artifacts you can open <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="footer-brand">Armin Isaković</p>
+        <p class="footer-bio">Frontend engineer from Zenica, Bosnia and Herzegovina. I studied software engineering in Sarajevo, I’ve finished a half-marathon, and I do my best work when I own a problem from the first conversation to production.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Roles">
+        <h2>Roles I’m a fit for</h2>
+        <ul>
+          <li><a href="frontend-engineer.html">Frontend Engineer</a></li>
+          <li><a href="full-stack-engineer.html">Full-Stack Engineer</a></li>
+          <li><a href="product-engineer.html">Product Engineer</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-i-build.html">How I Build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="assets/Armin-Isakovic-Resume.pdf" download>Résumé (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="wrap footer-base">
+      <p>© 2026 Armin Isaković</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>

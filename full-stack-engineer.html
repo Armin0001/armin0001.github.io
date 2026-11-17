@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Full-Stack Engineer — why I fit | Armin Isaković</title>
+  <meta name="description" content="Why Armin Isaković is a fit for full-stack roles: sole developer of a production system from PostgreSQL schema to deploy, with concurrency, access control and TypeScript end to end.">
+  <meta name="author" content="Armin Isaković">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp). Preview crawlers need absolute URLs. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armin0001.github.io/full-stack-engineer.html">
+  <meta property="og:title" content="Full-Stack Engineer — why I fit | Armin Isaković">
+  <meta property="og:description" content="Why Armin Isaković is a fit for full-stack roles: sole developer of a production system from PostgreSQL schema to deploy, with concurrency, access control and TypeScript end to end.">
+  <meta property="og:image" content="https://armin0001.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://armin0001.github.io/full-stack-engineer.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/yanone-kaffeesatz-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/maitree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- The icon sprite, header, Recruiter Fast Lane and footer are identical on every page.
+       When you change one of them, change it on all pages. -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M6.5 17.5 17.5 6.5M8.5 6.5h9v9"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 20h14"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-south" viewBox="0 0 24 24"><path d="M12 5v14M6.5 13.5 12 19l5.5-5.5"/></symbol>
+    <symbol id="i-fast" viewBox="0 0 24 24"><path d="m5 7 5 5-5 5M13 7l5 5-5 5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="wrap bar" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Armin Isaković, home">Armin Isaković</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#artifacts">Artifacts <span class="nav-count" aria-hidden="true">12</span></a></li>
+        <li><a href="how-i-build.html">How I Build</a></li>
+      </ul>
+
+      <div class="bar-actions">
+        <a class="bar-resume" href="assets/Armin-Isakovic-Resume.pdf" download>
+          Résumé <svg class="i" aria-hidden="true"><use href="#i-down"/></svg>
+        </a>
+        <a class="btn btn-primary btn-sm" href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="wrap">
+        <p class="eyebrow"><span class="eyebrow-num">Role fit</span> TypeScript · Node.js · PostgreSQL</p>
+        <h1 id="page-title">Full-Stack <em>Engineer.</em></h1>
+        <p class="lede">I lean frontend, but I do not stop at the API boundary. I have designed the schema, written the access rules, wired up the storage and run the deploys, on my own, for a system people depend on.</p>
+      </div>
+    </section>
+
+    <div class="page-body">
+      <div class="wrap split">
+        <div class="prose">
+          <h2>Why I fit</h2>
+
+          <ol class="loop">
+            <li>
+              <h3>I have owned a whole system, not a slice of one</h3>
+              <p>As a freelance developer I was the only engineer on a production membership registry for a professional licensing body. I gathered the requirements from a <span class="nw">non-technical</span> client, designed the PostgreSQL schema, built authentication and session handling, integrated object storage and SMS, deployed it, and maintained it in production for around 40 member facilities. <a class="aref" href="index.html#artifact-01"><span class="vh">artifact </span>A-01</a></p>
+            </li>
+            <li>
+              <h3>I start from the data model</h3>
+              <p>In that system the schema follows the real hierarchy: a legal entity, the licensed individuals registered under it, and each individual’s dues, fees and records. Access control is data too. Ten resources, four actions, forty permission combinations that admins change in a settings screen, with no redeploy.</p>
+            </li>
+            <li>
+              <h3>I take correctness under concurrency seriously</h3>
+              <p>Online Ticket Booth exists because of one question: what happens when two people buy the same seat in the same instant? The answer is an atomic, all-or-nothing claim in a Lua script on Redis, held to the same test contract as the in-process store and verified against real servers. <a class="aref" href="index.html#artifact-04"><span class="vh">artifact </span>A-04</a></p>
+            </li>
+            <li>
+              <h3>I have worked both sides of the API at work</h3>
+              <p>At Artco Group I designed REST API workflows and authentication guards with role-based access control, and built full-stack features on Node.js and Firestore for admin modules and real-time dashboards. Before that I was a Node.js developer at WellBeing, helping maintain five high-traffic websites.</p>
+            </li>
+            <li>
+              <h3>One language, end to end</h3>
+              <p>TypeScript from the validation schema to the component means fewer seams for bugs to hide in. I have also run a product of my own on that stack since 2025: 15+ calculators on their own domain, built to be found by search. <a class="aref" href="index.html#artifact-03"><span class="vh">artifact </span>A-03</a></p>
+            </li>
+          </ol>
+
+          <h2>Where I am most useful</h2>
+          <p>I am a frontend-leaning full-stack engineer. The backend work I have done is Node.js, PostgreSQL and the services around them, at the scale a small team runs. That is the kind of full-stack role where I add the most: owning a feature from the table to the pixel, without a handoff in the middle.</p>
+
+          <h2>What I am looking for</h2>
+          <p>A product team where full-stack means exactly that, and where the person who designs the schema is trusted to ship the screen that uses it.</p>
+          <p>I am based in Zenica, Bosnia and Herzegovina, open to remote work, and available now.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="contact.html">Talk to me about a full-stack role <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="assets/Armin-Isakovic-Resume.pdf" download>Download résumé <span class="btn-note">PDF</span></a>
+          </div>
+        </div>
+
+        <aside class="side-card" aria-labelledby="proof-title">
+          <h2 id="proof-title">Proof for this role</h2>
+          <ul>
+            <li><strong>Membership registry</strong> Schema to deploy, alone. <a class="aref" href="index.html#artifact-01"><span class="vh">artifact </span>A-01</a></li>
+            <li><strong>Online Ticket Booth</strong> Redis, Lua, and a test contract. <a class="aref" href="index.html#artifact-04"><span class="vh">artifact </span>A-04</a></li>
+            <li><strong>The Advanced Calculator</strong> A product I run. <a class="aref" href="index.html#artifact-03"><span class="vh">artifact </span>A-03</a></li>
+            <li><strong>Artco Group and WellBeing</strong> <a href="index.html#experience">See the track record</a></li>
+            <li><strong>The full toolkit</strong> <a href="index.html#stack">See the stack</a></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+
+    <div class="closing">
+
+    <section id="fast-lane" class="fastlane" aria-labelledby="fast-lane-title">
+      <div class="wrap">
+        <div class="fl-panel">
+          <header class="fl-head">
+            <p class="fl-kicker"><svg class="i" aria-hidden="true"><use href="#i-fast"/></svg> For recruiters</p>
+            <h2 id="fast-lane-title">Recruiter Fast Lane</h2>
+            <p class="fl-sub">Everything you need to screen me in 30 seconds. No scrolling back up required.</p>
+          </header>
+
+          <dl class="fl-facts">
+            <div><dt>Role</dt><dd>Frontend / Full-Stack Engineer</dd></div>
+            <div><dt>Experience</dt><dd>Less than 5 years <small>Team lead in 2024</small></dd></div>
+            <div><dt>Core stack</dt><dd>React, Next.js, TypeScript <small>Node.js, PostgreSQL</small></dd></div>
+            <div><dt>Availability</dt><dd>Now <small>Full-time or contract</small></dd></div>
+            <div><dt>Work model</dt><dd>Remote, hybrid or on-site</dd></div>
+            <div><dt>Location</dt><dd>Zenica, Bosnia &amp; Herzegovina <small>Central European Time</small></dd></div>
+            <div><dt>Work eligibility</dt><dd>EU Blue Card eligible <small>Ready to relocate</small></dd></div>
+            <div><dt>Languages</dt><dd>English C1, German B1 <small>Bosnian native</small></dd></div>
+            <div><dt>Education</dt><dd>B.Sc. Software Engineering <small>International University of Sarajevo</small></dd></div>
+          </dl>
+
+          <div class="fl-summary">
+            <p class="fl-label">Copy-ready summary <span>Click the text to select all of it</span></p>
+            <p class="fl-copy">Armin Isaković, Frontend / Full-Stack Engineer. Less than 5 years of work experience, shipping production React, Next.js and TypeScript; team lead in 2024 and mentor to two junior developers. English C1, German B1. Based in Bosnia and Herzegovina (CET), EU Blue Card eligible and ready to relocate. Available now. armin.isakovic23@gmail.com, linkedin.com/in/armin-isakovic-dev</p>
+          </div>
+
+          <address class="fl-actions">
+            <a class="btn btn-gold" href="assets/Armin-Isakovic-Resume.pdf" download>Résumé <span class="btn-note">PDF</span></a>
+            <a class="btn btn-outline" href="mailto:armin.isakovic23@gmail.com?subject=Hello%20Armin%20%E2%80%94%20saw%20your%20portfolio">Email</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/armin-isakovic-dev" target="_blank" rel="noopener">LinkedIn <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="https://github.com/Armin0001" target="_blank" rel="noopener">GitHub <svg class="i" role="img" aria-label="(opens in a new tab)"><use href="#i-ext"/></svg></a>
+            <a class="btn btn-outline" href="tel:+38761088080">+387 61 088 080</a>
+            <a class="fl-more" href="index.html#artifacts">12 artifacts you can open <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </address>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-about">
+        <p class="footer-brand">Armin Isaković</p>
+        <p class="footer-bio">Frontend engineer from Zenica, Bosnia and Herzegovina. I studied software engineering in Sarajevo, I’ve finished a half-marathon, and I do my best work when I own a problem from the first conversation to production.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Roles">
+        <h2>Roles I’m a fit for</h2>
+        <ul>
+          <li><a href="frontend-engineer.html">Frontend Engineer</a></li>
+          <li><a href="full-stack-engineer.html" aria-current="page">Full-Stack Engineer</a></li>
+          <li><a href="product-engineer.html">Product Engineer</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav" aria-label="Site">
+        <h2>Site</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-i-build.html">How I Build</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="assets/Armin-Isakovic-Resume.pdf" download>Résumé (PDF)</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="wrap footer-base">
+      <p>© 2026 Armin Isaković</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</body>
+</html>
